@@ -27,6 +27,8 @@ admm.iters = function(Y,lambda1,lambda2,penalty="fused",rho=1,rho.increment=1,we
 	{
 		# reporting
 #	if(iter%%10==0)
+		Z.prev = do.call(cbind, Z)
+		print(diag(Z))
 		if(FALSE)
 		{
 			print(paste("iter=",iter))
